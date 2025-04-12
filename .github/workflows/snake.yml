@@ -9,6 +9,9 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
       - uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
@@ -16,13 +19,14 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg
 
+      - name: Set up Git
+        run: git config --global user.name "github-actions" && git config --global user.email "github-actions@github.com"
+
       - name: Commit animation
         uses: EndBug/add-and-commit@v9
         with:
           author_name: github-actions
           author_email: github-actions@github.com
-          message: "gerando snake animation"
+          message: "Gerando snake animation"
           add: "dist/*.svg"
-
-      - name: Push to GitHub
-        run: git push
+          push: true
