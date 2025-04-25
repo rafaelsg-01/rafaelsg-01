@@ -34,3 +34,5 @@ Conhecimento prático em **Next.js** (client/server) e suas principais bibliotec
 ![snake gif](https://github.com/rafaelsg-01/rafaelsg-01/blob/output/github-contribution-grid-snake.svg)
 -->
 
+![snake gif](https://github.com/rafaelsg-01/rafaelsg-01/blob/output/github-contribution-grid-snake.svg)
+
